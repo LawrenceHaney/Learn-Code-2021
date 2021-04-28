@@ -7,16 +7,21 @@ namespace Set {
  }
  public bool checkIfSet(array cardsSelected){
     var Res = false;
-    cardSelected[0].getProps()=> props{
-        if(props.getValue(card[0]) == 
-        props.getValue(card[1]) == 
-        props.getValue(card[2] 
+    var Props = cardSelected[0].getProps();
+    forEach(Props){
+        if(Props.getValue(card[0]) == 
+        Props.getValue(card[1]) == 
+        Props.getValue(card[2] 
         || 
-        props.getValue(card[0]) != 
-        props.getValue(card[1]) != 
-        props.getValue(card[2]){
+        Props.getValue(card[0]) != 
+        Props.getValue(card[1]) != 
+        Props.getValue(card[2])) {
             Res = true;
-        }  
+        }
+        else{
+            Res = false;
+            break;
+        }
     }
     return Res;
  }
